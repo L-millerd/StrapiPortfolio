@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  server: "https://"//put your digital ocean link here
+  server: "https://squid-app-sca5s.ondigitalocean.app/"//put your digital ocean link here
 };
