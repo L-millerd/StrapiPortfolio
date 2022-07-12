@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  server: "https://"//put your digital ocean link here
 };
