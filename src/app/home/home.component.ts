@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.cs.getHomeContent().subscribe( res =>{
       console.log(res);
-      this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
+      // this.websiteHeroImage = environment.server + res.data.attributes.WebsiteHeroImage.data.attributes.url;
       console.log(this.websiteHeroImage);
       this.name = res.data.attributes.Name;
     })

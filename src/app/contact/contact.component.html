@@ -1,1 +1,25 @@
-<p>contact works!</p>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Name</label>
+    <input [(ngModel)]="name" name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input [(ngModel)]="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Message</label>
+    <textarea [(ngModel)]="message" name="message" class="form-control" rows="3"></textarea>
+  </div>
+
+  <re-captcha class="mt-3" (resolved)="resolved($event)" siteKey="6LcfP-cgAAAAAOR8M3RDkR18Bqj8VA8mb5z26a7r"></re-captcha>
+  <button type="submit" class="btn btn-primary" (click)="submitLead()" [disabled]="formInvalid">Submit</button>
+
+  <div class="mt3" [hidden]="formMessage">
+    Thank you for contacting me
+  </div>
+  <!-- <button type="submit" class="btn btn-primary" (click)="submitLead()" >Submit</button> -->
+
+  <!-- 6LcfP-cgAAAAAOR8M3RDkR18Bqj8VA8mb5z26a7r -->

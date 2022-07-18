@@ -1,1 +1,36 @@
-<p>projects works!</p>
+
+<div class="projectsContainer">
+  <div class="projectsContent">
+    <h1>Projects</h1>
+    <div class="buttonsRow"></div>
+
+    <div class="projectList" *ngFor="let project of projects; let i = index">
+
+      <div class="projectCard Row">
+        <div class="cardInfo col-8">
+          <h3>{{project.attributes.Title}}</h3>
+
+          <ul class="skills" *ngFor="let skill of project.attributes.skills.data">
+            <li>{{skill.attributes.SkillName}}</li>
+          </ul>
+
+          <p>{{project.attributes.Summary}}</p>
+
+          <div class="linksRow Row">
+            <a [href]="project.attributes.WebLink"><button class="btn btn-primary">Demo</button></a>
+            <a href="#"><img class="socialIcon" src="../../assets/git_logo.png"></a>
+          </div>
+        </div>
+
+        <p>{{project.attributes.EndDate}}</p>
+
+        <div class="cardImage col-3">
+          <img [src]="server + project.attributes.Image.data.attributes.formats.thumbnail.url">
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,23 @@
+
+
+POST https://squid-app-sca5s.ondigitalocean.app/api/leads
+Content-Type: application/json
+
+{
+  "data":{
+    "Name": "john",
+    "Email": "john@john.com",
+    "Message": "test message"
+  }
+}
+###
+
+GET http://localhost:1337/api/skills?populate=deep,2
+
+###
+
+GET http://localhost:1337/api/projects?populate=deep,2
+
+###
+
+GET  https://squid-app-sca5s.ondigitalocean.app/api/projects?populate=deep,2
