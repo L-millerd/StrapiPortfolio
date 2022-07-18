@@ -22,7 +22,7 @@ export class ProjectsComponent implements OnInit {
       this.projects = res.data;
       // this.skills = res.data.attributes.skills
       console.log(this.projects[0].attributes.skills.data[0].attributes.SkillName);
-      console.log(this.projects[1].attributes.skills.data[0].attributes.SkillName);
+      console.log(this.projects[1].attributes.skills.data[2].attributes.SkillName);
 
       console.log(environment.server);
     })
